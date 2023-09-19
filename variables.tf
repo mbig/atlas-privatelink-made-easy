@@ -21,6 +21,12 @@ variable "user" {
 #variable "AWS_SECRET_ACCESS_KEY" {
 #  description = "The secret key for AWS Account"
 #}
+
+variable "AWS_SESSION_TOKEN" {
+  default     = ""
+  description = "AWS Session Token"
+}
+
 variable "atlas_region" {
   default     = "US_EAST_1"
   description = "Atlas Region"

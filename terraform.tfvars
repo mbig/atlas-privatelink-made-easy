@@ -1,6 +1,6 @@
 #Atlas Cluster Settings
 project_id = "640264ac0b7bf303e9d136dc"
-atlas_cluster_name = "demo-cluster0"
+atlas_cluster_name = "demo-cluster10"
 atlas_cluster_type = "REPLICASET"
 atlas_cluster_disk_size = 8
 atlas_cluster_region_config_provider_name = "AWS"
