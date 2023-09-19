@@ -121,3 +121,8 @@ variable "ec2_tag_name" {
   type = string
   description = "EC2 tag name"
 }
+
+variable "region" {
+  default     = "us-east-1"
+  description = "AWS Region"
+}
