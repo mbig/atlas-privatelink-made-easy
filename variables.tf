@@ -15,12 +15,12 @@ variable "user" {
 #variable "atlasprojectid" {
 #  description = "Atlas project ID"
 #}
-variable "AWS_ACCESS_KEY_ID" {
-  description = "The access key for AWS Account"
-}
-variable "AWS_SECRET_ACCESS_KEY" {
-  description = "The secret key for AWS Account"
-}
+#variable "AWS_ACCESS_KEY_ID" {
+#  description = "The access key for AWS Account"
+#}
+#variable "AWS_SECRET_ACCESS_KEY" {
+#  description = "The secret key for AWS Account"
+#}
 variable "atlas_region" {
   default     = "US_EAST_1"
   description = "Atlas Region"
