@@ -1,0 +1,24 @@
+#Atlas Cluster Settings
+project_id = "640264ac0b7bf303e9d136dc"
+atlas_cluster_name = "demo-cluster0"
+atlas_cluster_type = "REPLICASET"
+atlas_cluster_disk_size = 8
+atlas_cluster_region_config_provider_name = "AWS"
+atlas_cluster_region_config_region_name = "US_EAST_1"
+atlas_cluster_region_config_priority = 7
+atlas_cluster_electable_specs_instance_size = "M10"
+atlas_cluster_electable_specs_node_count = 3
+atlas_cluster_auto_scaling_compute_enabled = true
+atlas_cluster_auto_scaling_compute_scale_down_enabled = true
+atlas_cluster_auto_scaling_disk_gb_enabled = true
+atlas_cluster_auto_scaling_compute_min_instance_size = "M10"
+atlas_cluster_auto_scaling_compute_max_instance_size = "M30"
+
+#VPC Settings
+vpc_cidr_block = "10.30.0.0/16"
+subnet_a_cidr_block = "10.30.1.0/24"
+subnet_b_cidr_block = "10.30.2.0/24"
+
+#EC2 instance
+ec2_instance_type = "t2.micro"
+ec2_tag_name = "pl-atlas-test"
