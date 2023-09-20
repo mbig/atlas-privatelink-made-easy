@@ -1,10 +1,12 @@
 variable "public_key" {
   description = "Public API key to authenticate to Atlas"
-  default = "mbpwjvfq"
+#  default = "mbpwjvfq"
+  default = ""
 }
 variable "private_key" {
   description = "Private API key to authenticate to Atlas"
-  default = "73bedbc0-387b-4798-a3b7-a5693f670ba7"
+#  default = "73bedbc0-387b-4798-a3b7-a5693f670ba7"
+  default = ""
 }
 variable "user" {
   description = "MongoDB Atlas User"

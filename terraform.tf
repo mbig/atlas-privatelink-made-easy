@@ -23,3 +23,8 @@ terraform {
 provider "aws" {
   region = "us-east-1"
 }
+
+provider "mongodbatlas" {
+  public_key = var.public_key
+  private_key = var.private_key
+}
