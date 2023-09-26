@@ -12,7 +12,7 @@ data "aws_iam_policy_document" "assume_role" {
 }
 
 resource "aws_iam_role" "lambda_permission" {
-  name               = "atlas_lambda_permission"
+  name               = "dev-atlas_lambda_permission"
   assume_role_policy = data.aws_iam_policy_document.assume_role.json
 }
 
@@ -24,7 +24,7 @@ resource "aws_iam_role_policy_attachment" "AWSLambdaVPCAccessExecutionRole" {
 resource "aws_lambda_function" "atlas_lambda_demo" {
   # If the file is not in the current working directory you will need to include a
   # path.module in the filename.
-  filename      = "awslambda-demo/deployment.zip"
+  filename      = "../modules/application/awslambda-demo/deployment.zip"
   function_name = "atlas_lambda_demo"
   role          = aws_iam_role.lambda_permission.arn
   handler       = "index.lambda_handler"

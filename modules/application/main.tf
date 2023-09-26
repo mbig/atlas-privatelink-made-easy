@@ -31,19 +31,3 @@ replication_specs {
   }
 
 }
-#
-#data "mongodbatlas_advanced_cluster" "cluster-atlas" {
-#  project_id = var.project_id
-#  name       = mongodbatlas_advanced_cluster.cluster-atlas.name
-#  depends_on = [mongodbatlas_privatelink_endpoint_service.atlaseplink]
-#}
-#
-#output "atlasclusterstring" {
-#  value = data.mongodbatlas_advanced_cluster.cluster-atlas.connection_strings
-#  #value = data.mongodbatlas_cluster.cluster-atlas.connection_strings
-#}
-#output "plstring" {
-#  value = lookup(data.mongodbatlas_advanced_cluster.cluster-atlas.connection_strings[0].aws_private_link_srv, aws_vpc_endpoint.ptfe_service.id)
-#  #value = lookup(data.mongodbatlas_cluster.cluster-atlas.connection_strings[0].aws_private_link_srv, aws_vpc_endpoint.ptfe_service.id)
-#}
-#

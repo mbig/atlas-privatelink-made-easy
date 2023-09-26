@@ -12,7 +12,7 @@ data "aws_ami" "amazon-linux-2" {
 }
 
 resource "aws_iam_role" "ec2-ssm-role" {
-  name = "ec2_ssm_role"
+  name = "dev_ec2_ssm_role"
 
   assume_role_policy = jsonencode({
     Version = "2012-10-17"
