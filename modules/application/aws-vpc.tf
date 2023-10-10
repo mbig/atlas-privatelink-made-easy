@@ -3,6 +3,9 @@ resource "aws_vpc" "primary" {
   cidr_block           = var.vpc_cidr_block
   enable_dns_hostnames = true
   enable_dns_support   = true
+  tags = {
+    Name =  "${var.environment}-privatelink-demo-vpc"
+  }
 }
 
 # Create IGW

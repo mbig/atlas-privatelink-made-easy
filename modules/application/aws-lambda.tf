@@ -12,7 +12,7 @@ data "aws_iam_policy_document" "assume_role" {
 }
 
 resource "aws_iam_role" "lambda_permission" {
-  name               = "dev-atlas_lambda_permission"
+  name               = "${var.environment}_atlas_lambda_permission"
   assume_role_policy = data.aws_iam_policy_document.assume_role.json
 }
 

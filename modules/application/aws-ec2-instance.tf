@@ -12,7 +12,7 @@ data "aws_ami" "amazon-linux-2" {
 }
 
 resource "aws_iam_role" "ec2-ssm-role" {
-  name = "dev_ec2_ssm_role"
+  name = "${var.environment}_ec2_ssm_role"
 
   assume_role_policy = jsonencode({
     Version = "2012-10-17"
@@ -47,7 +47,10 @@ resource "aws_instance" "ec2-instance" {
   vpc_security_group_ids = [
     aws_security_group.primary_default.id
   ]
+
   tags = {
-    Name = var.ec2_tag_name
+    Name  = var.ec2_tag_name
+    owner = "Gefter Chongong"
+    keep_until = "2024-12-31"
   }
 }

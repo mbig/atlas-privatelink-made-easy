@@ -2,7 +2,10 @@
 import os
 from pymongo import MongoClient
 
-client = MongoClient(host="mongodb+srv://gefterchongong:%23%40theD00r@adcluster5-pl-0.uxs7t.mongodb.net/")
+username = os.environ['MONGODB_USERNAME']
+password = os.environ['MONGODB_PASSWORD']
+
+client = MongoClient(host="mongodb+srv://app-dev-pl-0.uxs7t.mongodb.net/", username=username, password=password)
 
 
 def lambda_handler(event, context):

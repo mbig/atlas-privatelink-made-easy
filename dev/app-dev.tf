@@ -13,6 +13,7 @@ module "app-dev" {
   atlas_cluster_region_config_provider_name = "AWS"
   atlas_cluster_region_config_region_name = "US_EAST_1"
   atlas_cluster_type = "REPLICASET"
+  environment = "dev"
   ec2_instance_type = "t2.micro"
   ec2_tag_name = "atlas-dev"
   project_id = "640264ac0b7bf303e9d136dc"
