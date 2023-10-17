@@ -44,9 +44,7 @@ resource "aws_instance" "ec2-instance" {
   instance_type        = var.ec2_instance_type
   iam_instance_profile = aws_iam_instance_profile.ec2_ssm_instance_profile.name
   subnet_id            = aws_subnet.primary-az1.id
-  vpc_security_group_ids = [
-    aws_security_group.primary_default.id
-  ]
+  vpc_security_group_ids = [aws_security_group.primary_default.id]
 
   tags = {
     Name  = var.ec2_tag_name

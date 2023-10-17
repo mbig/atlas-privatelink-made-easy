@@ -21,11 +21,11 @@ replication_specs {
         node_count    = var.atlas_cluster_electable_specs_node_count
       }
       auto_scaling {
-        compute_enabled            = true
-        compute_scale_down_enabled = true
-        disk_gb_enabled            = true
-        compute_min_instance_size  = "M10"
-        compute_max_instance_size  = "M30"
+        compute_enabled            = var.atlas_cluster_auto_scaling_compute_enabled
+        compute_scale_down_enabled = var.atlas_cluster_auto_scaling_compute_scale_down_enabled
+        disk_gb_enabled            = var.atlas_cluster_auto_scaling_disk_gb_enabled
+        compute_min_instance_size  = var.atlas_cluster_auto_scaling_compute_min_instance_size
+        compute_max_instance_size  = var.atlas_cluster_auto_scaling_compute_max_instance_size
       }
     }
   }

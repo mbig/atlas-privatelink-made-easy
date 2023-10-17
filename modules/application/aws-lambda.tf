@@ -33,4 +33,11 @@ resource "aws_lambda_function" "atlas_lambda_demo" {
     subnet_ids         = [aws_subnet.primary-az1.id, aws_subnet.primary-az2.id]
     security_group_ids = [aws_security_group.primary_default.id]
   }
+  environment {
+    variables = {
+              "MONGODB_PASSWORD" = "mongopass"
+              "MONGODB_USERNAME" = "gefterchongong"
+            }
+        }
+
 }
